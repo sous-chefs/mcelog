@@ -24,6 +24,7 @@ default['mcelog']['syslog'] = 'yes'
 default['mcelog']['syslog-error'] = 'yes'
 default['mcelog']['logfile'] = '/var/log/mcelog' # this can only be used if syslog is not active
 default['mcelog']['filter-memory-errors'] = 'no'
+default['mcelog']['raw'] = 'no'
 
 # daemonize user/group
 default['mcelog']['run-credentials-user'] = 'root'
