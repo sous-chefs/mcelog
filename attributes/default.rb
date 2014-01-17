@@ -6,8 +6,10 @@
 case node['platform_family']
 when 'rhel', 'fedora'
   default['mcelog']['conf_dir'] = '/etc'
+  default['mcelog']['service_name'] = 'mcelogd'
 else
   default['mcelog']['conf_dir'] = '/etc/mcelog'
+  default['mcelog']['service_name'] = 'mcelog'
 end
 
 #

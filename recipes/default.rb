@@ -33,15 +33,25 @@ unless platform_family?('windows') || node['virtualization']['role'] == 'guest'
     action :create
   end
 
+  # rhel 5 doesn't come with an init script to run in daemonized mode so we need to add it
+  if platform_family?('rhel') && node['platform_version'].to_i < 6
+    cookbook_file '/etc/init.d/mcelogd' do
+      source 'mcelogd'
+      owner 'root'
+      group 'root'
+      mode '0755'
+    end
+  end
+
   template File.join(node['mcelog']['conf_dir'], 'mcelog.conf') do
     source 'mcelog.conf.erb'
     owner 'root'
     group 'root'
     mode '0644'
-    notifies :restart, 'service[mcelog]'
+    notifies :restart, "service[#{node['mcelog']['service_name']}]"
   end
 
-  service 'mcelog' do
+  service node['mcelog']['service_name'] do
     supports :restart => true
     action [:enable, :start]
   end
