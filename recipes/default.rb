@@ -36,10 +36,17 @@ unless platform_family?('windows') || node['virtualization']['role'] == 'guest'
   # rhel 5 doesn't come with an init script to run in daemonized mode so we need to add it
   if platform_family?('rhel') && node['platform_version'].to_i < 6
     cookbook_file '/etc/init.d/mcelogd' do
-      source 'mcelogd'
+      source 'mcelogd_init'
       owner 'root'
       group 'root'
       mode '0755'
+    end
+
+    cookbook_file '/etc/sysconfig/mcelogd' do
+      source 'mcelogd_sysconfig'
+      owner 'root'
+      group 'root'
+      mode '0644'
     end
   end
 

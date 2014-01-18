@@ -1,0 +1,10 @@
+# mcelog mode
+# valid values: daemon, trigger, cron
+# Recommended value daemon
+MCELOG_MODE=daemon
+
+# additional options to pass to the daemon
+# this only works in daemon mode
+# see the manpage for details. settings can be also
+# set in /etc/mcelog.conf
+MCELOG_OPTIONS=""
