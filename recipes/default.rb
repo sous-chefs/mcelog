@@ -59,7 +59,7 @@ unless platform_family?('windows') || node['virtualization']['role'] == 'guest'
   end
 
   service node['mcelog']['service_name'] do
-    supports :restart => true
+    supports [:restart => true, :status => true]
     action [:enable, :start]
   end
 
