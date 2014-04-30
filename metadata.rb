@@ -6,6 +6,6 @@ description      'Installs/Configures mcelog to catch and decode hardware errors
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.4'
 
-%w{ debian ubuntu centos redhat fedora oracle scientific }.each do |os|
+%w(debian ubuntu centos redhat fedora oracle scientific).each do |os|
   supports os
 end
