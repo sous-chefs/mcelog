@@ -4,7 +4,8 @@ Installs and configures mcelog for decoding kernel hardware error messages on Li
 
 Requirements
 ------------
-* Ubuntu or RHEL based system
+* Ubuntu 10.04/12.04
+* RHEL based system
 
 
 Attributes
@@ -29,7 +30,7 @@ Attributes
 
 ### user/group settings
 * `default['mcelog']['run-credentials-user']` = 'root'
-* `default['mcelog']['run-credentials-group']` = 'nobody'
+* `default['mcelog']['run-credentials-group']` = 'root'
 * `default['mcelog']['server']['client-user']` = 'root'
 * `default['mcelog']['server']['client-group']` = 'root'
 
@@ -69,8 +70,8 @@ Apply to the node
 License and Author
 ------------------
 
-Author:: Limelight Networks, Inc. (<tsmith@limelight.com>)
+Author:: Tim Smith - Limelight Networks, Inc. (<tsmith@limelight.com>)
 
-Copyright:: 2013, Limelight Networks, Inc.
+Copyright:: 2013-2014, Limelight Networks, Inc.
 
-License:: All rights reserved
+License:: Apache 2.0
