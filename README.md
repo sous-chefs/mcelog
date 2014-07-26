@@ -1,5 +1,7 @@
 mcelog Cookbook
 ===============
+[![Build Status](https://travis-ci.org/tas50/chef-mcelog.svg?branch=master)](https://travis-ci.org/tas50/chef-mcelog)
+
 Installs and configures mcelog for decoding kernel hardware error messages on Linux
 
 Requirements
