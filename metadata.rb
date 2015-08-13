@@ -9,4 +9,4 @@ version '0.1.5'
   supports os
 end
 source_url 'https://github.com/tas50/mcelog' if respond_to?(:source_url)
-issues_url 'https://github.com/tas50/mcelog/issues'  if respond_to?(:issues_url)
+issues_url 'https://github.com/tas50/mcelog/issues' if respond_to?(:issues_url)
