@@ -15,6 +15,9 @@ Chef 11+
 * Debian
 * RHEL based distros
 
+### Cookbooks:
+
+*None*
 
 Attributes
 ----------
