@@ -7,8 +7,13 @@ Installs and configures mcelog for decoding kernel hardware error messages on Li
 
 Requirements
 ------------
+### Chef
+Chef 11+
+
+### Platform
 * Ubuntu 10.04+
-* RHEL based system
+* Debian
+* RHEL based distros
 
 
 Attributes
