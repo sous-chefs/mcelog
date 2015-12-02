@@ -1,9 +1,7 @@
-mcelog Cookbook CHANGELOG
-=========================
+# mcelog Cookbook CHANGELOG
 This file is used to list changes made in each version of the mcelog cookbook.
 
-v0.2.0
-------
+## v0.2.0
 - Use standard Chef .gitignore file
 - Add travis.yml file for testing
 - Remove use of hash rockets in the rubocop.yml file
