@@ -16,7 +16,7 @@ end
 
 # determine config dir based on platform
 def mce_config_dir
-  if platform_family?('rhel', 'fedora')
+  if platform_family?('rhel', 'fedora') # rubocop: disable Style/GuardClause
     return '/etc/'
   else
     return '/etc/mcelog'
