@@ -1,7 +1,7 @@
 # mcelog Cookbook
 [![Build Status](https://travis-ci.org/tas50/chef-mcelog.svg?branch=master)](https://travis-ci.org/tas50/chef-mcelog) [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
 
-Installs and configures mcelog for decoding kernel hardware error messages on Linux.  Installs either the distro package or compiles from source if support for the latest server chipsets is necessary.
+Installs and configures mcelog for decoding kernel hardware error messages on Linux.
 
 ## Requirements
 ### Platforms
