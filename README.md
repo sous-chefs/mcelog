@@ -1,13 +1,12 @@
 # mcelog Cookbook
 [![Build Status](https://travis-ci.org/tas50/chef-mcelog.svg?branch=master)](https://travis-ci.org/tas50/chef-mcelog) [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
 
-Installs and configures mcelog for decoding kernel hardware error messages on Linux
+Installs and configures mcelog for decoding kernel hardware error messages on Linux.  Installs either the distro package or compiles from source if support for the latest server chipsets is necessary.
 
 ## Requirements
 ### Platforms
-- Ubuntu 10.04+
-- Debian
-- RHEL based distros
+- Debian/Ubuntu
+- RHEL based distros 6+ (RHEL 5.X will not work due to the old package included)
 
 ### Chef
 Chef 11+
@@ -16,10 +15,6 @@ Chef 11+
 _None_
 
 ## Attributes
-### platform specific attributes (auto set)
-- `default['mcelog']['conf_dir']` = '/etc'
-- `default['mcelog']['service_name']` = 'mcelogd'
-
 ### config options
 - `default['mcelog']['cpu']` = nil
 - `default['mcelog']['cpumhz']` = nil
