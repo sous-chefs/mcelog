@@ -1,6 +1,13 @@
 # mcelog Cookbook CHANGELOG
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## v1.0.0 (2016-01-31)
+- Add integration testing with Test Kitchen and kitchen-docker in Travis CI
+- Add support for RHEL 7
+- Bump the minimum RHEL release to 6 as 5 was actually broken before
+- Add inspec tests to ensure the service is started
+- Remove the attributes for service name and config dir and instead use helper methods
+
 ## v0.2.0
 - Use standard Chef .gitignore file
 - Add travis.yml file for testing
