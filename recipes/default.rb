@@ -33,7 +33,7 @@ if mce_should_install?
     action :create
   end
 
-  template ::File.join(mce_config_dir, 'mcelog.conf') do
+  template ::File.join('/etc/mcelog', 'mcelog.conf') do
     source 'mcelog.conf.erb'
     owner 'root'
     group 'root'
