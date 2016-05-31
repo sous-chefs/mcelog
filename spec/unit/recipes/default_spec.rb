@@ -1,10 +1,9 @@
 require 'spec_helper'
 
-describe 'default recipe on Ubuntu 14.04' do
-  let(:chef_run) do
-    ChefSpec::ServerRunner.new do |node|
-      node.automatic[:lsb][:codename] = 'trusty'
-    end.converge('mcelog::default')
+describe 'default recipe on Ubuntu 16.04' do
+      cached(:chef_run) do
+      runner = ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04')
+      runner.converge('mcelog::default')
   end
 
   it 'converges successfully' do
