@@ -65,8 +65,8 @@ default['mcelog']['page']['memory-ce-action'] = 'soft'
 
 # [trigger]
 default['mcelog']['trigger']['children-max'] = 2
-if platform_family?('rhel') && node['platform_version'].to_i >= 7
-  default['mcelog']['trigger']['directory'] = '/etc/mcelog/triggers'
-else
-  default['mcelog']['trigger']['directory'] = '/etc/mcelog'
-end
+default['mcelog']['trigger']['directory'] = if platform_family?('rhel') && node['platform_version'].to_i >= 7
+                                              '/etc/mcelog/triggers'
+                                            else
+                                              '/etc/mcelog'
+                                            end
