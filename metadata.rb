@@ -12,3 +12,5 @@ end
 
 source_url 'https://github.com/tas50/chef-mcelog' if respond_to?(:source_url)
 issues_url 'https://github.com/tas50/chef-mcelog/issues' if respond_to?(:issues_url)
+
+chef_version '>= 11.0' if respond_to?(:chef_version)
