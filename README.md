@@ -1,15 +1,15 @@
 # mcelog Cookbook
-[![Build Status](https://travis-ci.org/tas50/chef-mcelog.svg?branch=master)](https://travis-ci.org/tas50/chef-mcelog) [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
+[![Build Status](https://travis-ci.org/chef-cookbooks/mcelog.svg?branch=master)](https://travis-ci.org/chef-cookbooks/mcelog) [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
 
 Installs and configures mcelog for decoding kernel hardware error messages on Linux.
 
 ## Requirements
 ### Platforms
 - Debian/Ubuntu
-- RHEL based distros 6+ (RHEL 5.X will not work due to the old package included)
+- RHEL based distros 6+
 
 ### Chef
-Chef 11+
+- Chef 12.1+
 
 ### Cookbooks:
 _None_
@@ -63,13 +63,13 @@ _None_
 ## Usage
 Apply to the node
 
-# License & Authors
+## License & Authors
+
+Author:: Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
+Copyright:: 2013-2014, Limelight Networks, Inc.
+Copyright:: 2017, Chef Software, Inc.
 
 ```
-Author:: Tim Smith(<tsmith84@gmail.com>)
-
-Copyright:: 2013-2014, Limelight Networks, Inc
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
