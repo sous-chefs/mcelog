@@ -1,4 +1,4 @@
-service_name = if os[:family] == 'centos' && os[:release].to_i < 7
+service_name = if os.redhat? && os[:release].to_i < 7
                  'mcelogd'
                else
                  'mcelog'
