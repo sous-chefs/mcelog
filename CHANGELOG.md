@@ -1,7 +1,16 @@
 # mcelog Cookbook CHANGELOG
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## 2.0.0 (2017-03-01)
+
+- Use ChefDK for test deps and not the Gemfile
+- Add Github issue and PR templates
+- Test using Local Delivery and not Rake
+- Move ownership over to Chef from tas50
+- Require Chef 12.1+
+
 ## v1.0.0 (2016-01-31)
+
 - Add integration testing with Test Kitchen and kitchen-docker in Travis CI
 - Add support for RHEL 7
 - Bump the minimum RHEL release to 6 as 5 was actually broken before
@@ -9,6 +18,7 @@ This file is used to list changes made in each version of the mcelog cookbook.
 - Remove the attributes for service name and config dir and instead use helper methods
 
 ## v0.2.0
+
 - Use standard Chef .gitignore file
 - Add travis.yml file for testing
 - Remove use of hash rockets in the rubocop.yml file
