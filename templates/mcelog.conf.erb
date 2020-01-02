@@ -1,0 +1,43 @@
+# mcelog configuration written by Chef.  Do not hand edit
+
+<%= "cpu=#{node['mcelog']['cpu']}" unless node['mcelog']['cpu'].nil? -%>
+<%= "cpumhz=#{node['mcelog']['cpumhz']}" unless node['mcelog']['cpumhz'].nil? -%>
+logfile = <%= node['mcelog']['logfile'] %>
+raw = <%= node['mcelog']['raw'] %>
+filter = <%= node['mcelog']['filter'] %>
+filter-memory-errors = <%= node['mcelog']['filter-memory-errors'] %>
+syslog = <%= node['mcelog']['syslog'] %>
+syslog-error = <%= node['mcelog']['syslog-error'] %>
+dmi = <%= node['mcelog']['dmi'] %>
+run-credentials-user = <%= node['mcelog']['run-credentials-user'] %>
+run-credentials-group = <%= node['mcelog']['run-credentials-group'] %>
+
+[server]
+client-user = <%= node['mcelog']['server']['client-user'] %>
+client-group = <%= node['mcelog']['server']['client-group'] %>
+
+[dimm]
+dimm-tracking-enabled = <%= node['mcelog']['dimm']['dimm-tracking-enabled'] %>
+dmi-prepopulate = <%= node['mcelog']['dimm']['dmi-prepopulate'] %>
+uc-error-threshold = <%= node['mcelog']['dimm']['uc-error-threshold'] %>
+ce-error-threshold = <%= node['mcelog']['dimm']['ce-error-threshold'] %>
+
+[socket]
+socket-tracking-enabled = <%= node['mcelog']['socket']['socket-tracking-enabled'] %>
+mem-uc-error-threshold = <%= node['mcelog']['socket']['mem-uc-error-threshold'] %>
+mem-ce-error-trigger = <%= node['mcelog']['socket']['mem-ce-error-trigger'] %>
+mem-ce-error-threshold = <%= node['mcelog']['socket']['mem-ce-error-threshold'] %>
+mem-ce-error-log = <%= node['mcelog']['socket']['mem-ce-error-log'] %>
+
+[cache]
+cache-threshold-trigger = <%= node['mcelog']['cache']['cache-threshold-trigger'] %>
+cache-threshold-log = <%= node['mcelog']['cache']['cache-threshold-log'] %>
+
+[page]
+memory-ce-threshold = <%= node['mcelog']['page']['memory-ce-threshold'] %>
+memory-ce-log = <%= node['mcelog']['page']['memory-ce-log'] %>
+memory-ce-action = <%= node['mcelog']['page']['memory-ce-action'] %>
+
+[trigger]
+children-max = <%= node['mcelog']['trigger']['children-max'] %>
+directory = <%= node['mcelog']['trigger']['directory'] %>
