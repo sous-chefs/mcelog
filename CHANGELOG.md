@@ -1,6 +1,12 @@
 # mcelog Cookbook CHANGELOG
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## 2.0.1 (2020-01-02)
+
+- Correct path of mcelog.conf for rhel fedora - [@ashangit](https://github.com/ashangit)
+- Update specs to 16.04 - [@tas50](https://github.com/tas50)
+- Updates for cookstyle - [@tas50](https://github.com/tas50)
+
 ## 2.0.0 (2017-03-01)
 
 - Use ChefDK for test deps and not the Gemfile
