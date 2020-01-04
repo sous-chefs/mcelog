@@ -1,27 +1,35 @@
 # mcelog Cookbook
-[![Build Status](https://travis-ci.org/chef-cookbooks/mcelog.svg?branch=master)](https://travis-ci.org/chef-cookbooks/mcelog) [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
+[![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
 
 Installs and configures mcelog for decoding kernel hardware error messages on Linux.
 
 ## Requirements
+
 ### Platforms
-- Debian/Ubuntu
+
+- Debian 8/9 (10+ does not include mcelog)
+- Ubuntu 16.04 (18.04 does not include mcelog)
 - RHEL based distros 6+
 
 ### Chef
-- Chef 12.1+
 
-### Cookbooks:
+- Chef 12.15+
+
+### Cookbooks
+
 _None_
 
 ## Attributes
+
 ### config options
+
 - `default['mcelog']['cpu']` = nil
 - `default['mcelog']['cpumhz']` = nil
 - `default['mcelog']['filter']` = 'yes'
 - `default['mcelog']['dmi']` = 'no'
 
 ### logging options
+
 - `default['mcelog']['syslog']` = 'yes'
 - `default['mcelog']['syslog-error']` = 'yes'
 - `default['mcelog']['logfile']` = '/var/log/mcelog' # this can only be used if syslog is not active
@@ -29,18 +37,21 @@ _None_
 - `default['mcelog']['raw']` = 'no'
 
 ### user/group settings
+
 - `default['mcelog']['run-credentials-user']` = 'root'
 - `default['mcelog']['run-credentials-group']` = 'root'
 - `default['mcelog']['server']['client-user']` = 'root'
 - `default['mcelog']['server']['client-group']` = 'root'
 
 ### dimm monitoring settings
+
 - `default['mcelog']['dimm']['dimm-tracking-enabled']` = 'yes'
 - `default['mcelog']['dimm']['dmi-prepopulate']` = 'yes'
 - `default['mcelog']['dimm']['uc-error-threshold']` = '1 / 24h'
 - `default['mcelog']['dimm']['ce-error-threshold']` = '10 / 24h'
 
 ### cpu monitoring settings
+
 - `default['mcelog']['socket']['socket-tracking-enabled']` = 'yes'
 - `default['mcelog']['socket']['mem-uc-error-threshold']` = '100 / 24h'
 - `default['mcelog']['socket']['mem-ce-error-trigger']` = 'socket-memory-error-trigger'
@@ -48,20 +59,24 @@ _None_
 - `default['mcelog']['socket']['mem-ce-error-log']` = 'yes'
 
 ### cpu cache settings
+
 - `default['mcelog']['cache']['cache-threshold-trigger']` = 'cache-error-trigger'
 - `default['mcelog']['cache']['cache-threshold-log']` = 'yes'
 
 ### memory page settings
+
 - `default['mcelog']['page']['memory-ce-threshold']` = '10 / 24h'
 - `default['mcelog']['page']['memory-ce-log']` = 'yes'
 - `default['mcelog']['page']['memory-ce-action']` = 'soft'
 
 ### trigger settings
+
 - `default['mcelog']['trigger']['children-max']` = 2
 - `default['mcelog']['trigger']['directory']` = '/etc/mcelog'
 
 ## Usage
-Apply to the node
+
+Apply the default recipe to the node.
 
 ## License & Authors
 
