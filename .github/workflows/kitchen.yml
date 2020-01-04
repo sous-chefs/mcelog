@@ -1,0 +1,25 @@
+name: kitchen
+
+on: [pull_request]
+
+jobs:
+  dokken:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: ['debian-9', 'debian-10', 'centos-7', 'centos-8', 'fedora-latest', 'ubuntu-1604', 'ubuntu-1804']
+        suite: ['default']
+      fail-fast: false
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Install Chef Workstation
+      uses: actionshub/chef-install@master
+    - name: run dokken
+      run: |  
+        kitchen test ${{ matrix.suite }}-${{ matrix.os }}
+      env:
+        KITCHEN_LOCAL_YAML: kitchen.dokken.yml
+        CHEF_LICENSE: "accept-no-persist"
