@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: ['debian-9', 'debian-10', 'centos-7', 'centos-8', 'fedora-latest', 'ubuntu-1604', 'ubuntu-1804']
+        os: ['debian-8', 'debian-9', 'centos-6', 'centos-7', 'centos-8', 'fedora-latest', 'ubuntu-1604']
         suite: ['default']
       fail-fast: false
 
