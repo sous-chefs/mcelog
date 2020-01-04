@@ -1,5 +1,5 @@
 # mcelog Cookbook
-[![Build Status](https://travis-ci.org/chef-cookbooks/mcelog.svg?branch=master)](https://travis-ci.org/chef-cookbooks/mcelog) [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
+[![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
 
 Installs and configures mcelog for decoding kernel hardware error messages on Linux.
 
