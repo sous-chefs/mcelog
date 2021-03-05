@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe 'default recipe on Ubuntu 20.04' do
+describe 'default recipe on Debian 9' do
   cached(:chef_run) do
-    runner = ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '20.04')
+    runner = ChefSpec::ServerRunner.new(platform: 'debian', version: '9')
     runner.converge('mcelog::default')
   end
 
