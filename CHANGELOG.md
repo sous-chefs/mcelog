@@ -1,6 +1,11 @@
 # mcelog Cookbook CHANGELOG
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## Unreleased
+
+- Cookstyle fixes
+- Sous Chefs Adoption
+
 ## 2.0.1 (2020-01-02)
 
 - Correct path of mcelog.conf for rhel fedora - [@ashangit](https://github.com/ashangit)
