@@ -1,4 +1,5 @@
 # mcelog Cookbook
+
 [![Cookbook Version](https://img.shields.io/cookbook/v/mcelog.svg)](https://supermarket.chef.io/cookbooks/mcelog)
 
 Installs and configures mcelog for decoding kernel hardware error messages on Linux.
@@ -7,9 +8,8 @@ Installs and configures mcelog for decoding kernel hardware error messages on Li
 
 ### Platforms
 
-- Debian 8/9 (10+ does not include mcelog)
-- Ubuntu 16.04 (18.04 does not include mcelog)
-- RHEL based distros 6+
+- Debian 9 (10+ does not include mcelog)
+- RHEL based distros 7+
 
 ### Chef
 
@@ -17,7 +17,7 @@ Installs and configures mcelog for decoding kernel hardware error messages on Li
 
 ### Cookbooks
 
-_None_
+default - installs and configures mcelog
 
 ## Attributes
 

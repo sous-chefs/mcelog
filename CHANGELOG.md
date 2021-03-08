@@ -1,4 +1,5 @@
 # mcelog Cookbook CHANGELOG
+
 This file is used to list changes made in each version of the mcelog cookbook.
 
 ## Unreleased
@@ -39,5 +40,5 @@ This file is used to list changes made in each version of the mcelog cookbook.
 - Add badges and requirements information to the readme
 - Add chefignore to limit what files are uploaded to the server
 - Add basic chefspec converge test
-- Add source_url and issues_url to metadata.rb
+- Add source\_url and issues\_url to metadata.rb
 - Add a changelog file
