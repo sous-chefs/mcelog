@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## Unreleased
+
 ## 2.1.0 - *2021-03-22*
 
 - Cookstyle fixes
