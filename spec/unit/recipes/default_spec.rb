@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe 'default recipe on Ubuntu 16.04' do
+describe 'default recipe on Debian 9' do
   cached(:chef_run) do
-    runner = ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04')
+    runner = ChefSpec::ServerRunner.new(platform: 'debian', version: '9')
     runner.converge('mcelog::default')
   end
 
@@ -23,24 +23,9 @@ describe 'default recipe on Ubuntu 16.04' do
   end
 end
 
-describe 'default recipe on CentOS 6' do
+describe 'default recipe on CentOS 8' do
   cached(:chef_run) do
-    runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '6')
-    runner.converge('mcelog::default')
-  end
-
-  it 'starts mcelog service' do
-    expect(chef_run).to start_service('mcelogd')
-  end
-
-  it 'enables mcelog service' do
-    expect(chef_run).to enable_service('mcelogd')
-  end
-end
-
-describe 'default recipe on CentOS 7' do
-  cached(:chef_run) do
-    runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '7')
+    runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '8')
     runner.converge('mcelog::default')
   end
 
