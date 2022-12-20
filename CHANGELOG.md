@@ -4,6 +4,10 @@ This file is used to list changes made in each version of the mcelog cookbook.
 
 ## Unreleased
 
+## 2.1.4 - *2022-02-08*
+
+- Remove delivery folder
+
 ## 2.1.3 - *2021-08-30*
 
 - Standardise files with files in sous-chefs/repo-management
