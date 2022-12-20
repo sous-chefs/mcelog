@@ -4,6 +4,9 @@ This file is used to list changes made in each version of the mcelog cookbook.
 
 ## Unreleased
 
+- Use reusable workflow
+- Fix markdown in contributing docs
+
 ## 2.1.4 - *2022-02-08*
 
 - Remove delivery folder
