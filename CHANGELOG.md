@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## Unreleased
+
 ## 2.1.11 - *2023-09-04*
 
 ## 2.1.10 - *2023-07-10*
