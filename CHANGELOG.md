@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the mcelog cookbook.
 
 ## Unreleased
 
+- Fix markdown in contributing docs
+
 ## 2.1.13 - *2023-10-31*
 
 ## 2.1.12 - *2023-09-28*
