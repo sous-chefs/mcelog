@@ -4,8 +4,29 @@ This file is used to list changes made in each version of the mcelog cookbook.
 
 ## Unreleased
 
-- Use reusable workflow
 - Fix markdown in contributing docs
+
+## 2.1.13 - *2023-10-31*
+
+## 2.1.12 - *2023-09-28*
+
+## 2.1.11 - *2023-09-04*
+
+## 2.1.10 - *2023-07-10*
+
+## 2.1.9 - *2023-05-17*
+
+## 2.1.8 - *2023-05-03*
+
+## 2.1.7 - *2023-04-01*
+
+## 2.1.6 - *2023-03-02*
+
+- Standardise files with files in sous-chefs/repo-management
+
+## 2.1.5 - *2023-03-02*
+
+- Standardise files with files in sous-chefs/repo-management
 
 ## 2.1.4 - *2022-02-08*
 
