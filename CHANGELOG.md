@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the mcelog cookbook.
 
-## Unreleased
+## 2.2.2 - *2024-05-02*
 
 ## 2.2.1 - *2024-05-02*
 
