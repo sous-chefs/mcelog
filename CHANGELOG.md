@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## [2.2.4](https://github.com/sous-chefs/mcelog/compare/2.2.3...v2.2.4) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#41](https://github.com/sous-chefs/mcelog/issues/41)) ([eccab3f](https://github.com/sous-chefs/mcelog/commit/eccab3fcbd0564ea5df438b276358ed3b758068e))
+
 ## 2.2.0 - *2023-10-31*
 
 * Fix markdown in contributing docs
