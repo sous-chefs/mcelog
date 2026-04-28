@@ -8,6 +8,10 @@ describe 'test::default' do
   context 'when on Ubuntu' do
     platform 'ubuntu'
 
+    before do
+      stub_command('mcelog --is-cpu-supported').and_return(true)
+    end
+
     it 'installs mcelog package' do
       is_expected.to install_package('mcelog')
     end
@@ -28,6 +32,10 @@ describe 'test::default' do
 
   context 'when on CentOS 7' do
     platform 'centos', '7'
+
+    before do
+      stub_command('mcelog --is-cpu-supported').and_return(true)
+    end
 
     it 'creates the trigger directory' do
       is_expected.to create_directory('/etc/mcelog/triggers')

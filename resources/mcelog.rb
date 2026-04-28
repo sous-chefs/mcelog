@@ -36,10 +36,6 @@ property :trigger_directory, String, default: lazy { platform_family?('rhel') &&
 
 action_class do
   include Mcelog::Cookbook::Helpers
-
-  def cpu_supported?
-    shell_out('mcelog --is-cpu-supported').exitstatus == 0
-  end
 end
 
 action :install do
@@ -97,14 +93,14 @@ action :install do
   service mce_service_name do
     supports restart: true, status: true
     action [:enable, :start]
-    only_if { cpu_supported? }
+    only_if 'mcelog --is-cpu-supported'
   end
 end
 
 action :remove do
   service mce_service_name do
     action [:stop, :disable]
-    only_if { cpu_supported? }
+    only_if 'mcelog --is-cpu-supported'
   end
 
   package 'mcelog' do
@@ -124,6 +120,6 @@ end
 action :restart do
   service mce_service_name do
     action :restart
-    only_if { cpu_supported? }
+    only_if 'mcelog --is-cpu-supported'
   end
 end
