@@ -11,8 +11,6 @@ verifier:
 
 platforms:
   - name: almalinux-8
-  - name: centos-7
-  - name: oraclelinux-7
   - name: oraclelinux-8
   - name: rockylinux-8
 

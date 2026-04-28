@@ -2,8 +2,13 @@
 
 ## Supported Platforms
 
-- **Debian/Ubuntu**: x86 and x86_64 architectures.
-- **RHEL/CentOS/Oracle/Scientific**: x86 and x86_64 architectures.
+- **RHEL-based distributions (v8)**: AlmaLinux 8, Oracle Linux 8, and Rocky Linux 8.
+
+## Unsupported Platforms
+
+- **RHEL 7**: End of Life (June 2024).
+- **RHEL 9 / AlmaLinux 9 / Rocky Linux 9**: `mcelog` is deprecated and removed from official repositories, replaced by `rasdaemon`.
+- **Debian / Ubuntu**: `mcelog` is deprecated and removed from official repositories (starting with Debian 10 and Ubuntu 18.04), replaced by `rasdaemon`.
 
 ## Supported Architectures
 
@@ -19,4 +24,4 @@
 
 ## Transition Note
 
-Modern Linux kernels and distributions are transitioning from `mcelog` to `rasdaemon`. This cookbook focuses specifically on managing the `mcelog` daemon where required.
+Modern Linux kernels and distributions have transitioned from `mcelog` to `rasdaemon`. This cookbook is intended for maintaining legacy hardware on supported RHEL 8-based systems.

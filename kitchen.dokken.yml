@@ -12,22 +12,6 @@ platforms:
       image: dokken/almalinux-8
       pid_one_command: /usr/lib/systemd/systemd
 
-  - name: centos-7
-    driver:
-      image: dokken/centos-7
-      pid_one_command: /usr/lib/systemd/systemd
-      intermediate_instructions:
-        - RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
-        - RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-
-  - name: oraclelinux-7
-    driver:
-      image: dokken/oraclelinux-7
-      pid_one_command: /usr/lib/systemd/systemd
-      intermediate_instructions:
-        - RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/Oracle-* || true
-        - RUN sed -i 's|#baseurl=http://mirror.oracle.com|baseurl=http://yum.oracle.com|g' /etc/yum.repos.d/Oracle-* || true
-
   - name: oraclelinux-8
     driver:
       image: dokken/oraclelinux-8
