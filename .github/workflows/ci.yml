@@ -24,6 +24,8 @@ jobs:
       matrix:
         os:
           - almalinux-8
+          - centos-7
+          - oraclelinux-7
           - oraclelinux-8
           - rockylinux-8
         suite:
