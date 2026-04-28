@@ -24,8 +24,6 @@ jobs:
       matrix:
         os:
           - almalinux-8
-          - centos-7
-          - oraclelinux-7
           - oraclelinux-8
           - rockylinux-8
         suite:
@@ -45,3 +43,9 @@ jobs:
         with:
           suite: ${{ matrix.suite }}
           os: ${{ matrix.os }}
+      - name: Print debug output on failure
+        if: failure()
+        run: |
+          set -x
+          KITCHEN_LOCAL_YAML=kitchen.dokken.yml /usr/bin/kitchen exec ${{ matrix.suite }}-${{ matrix.os }} -c "journalctl -u mcelog --no-pager" || true
+          KITCHEN_LOCAL_YAML=kitchen.dokken.yml /usr/bin/kitchen exec ${{ matrix.suite }}-${{ matrix.os }} -c "mcelog --front --syslog" || true
