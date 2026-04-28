@@ -10,11 +10,16 @@ describe package('mcelog') do
   it { should be_installed }
 end
 
-describe service(service_name) do
-  it { should be_enabled }
-  # mcelog is hardware dependent and will fail to start on unsupported CPUs (like AMD in GHA)
-  # or in environments without /dev/mcelog. We check if it's running only if it's supported.
-  it { should be_running } if command('mcelog --is-cpu-supported').exit_status == 0
+if command('mcelog --is-cpu-supported').exit_status == 0
+  describe service(service_name) do
+    it { should be_enabled }
+    it { should be_running }
+  end
+else
+  # If CPU is not supported, the service should not be started by Chef
+  describe service(service_name) do
+    it { should_not be_running }
+  end
 end
 
 describe file('/etc/mcelog/mcelog.conf') do
