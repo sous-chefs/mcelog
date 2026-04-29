@@ -6,7 +6,10 @@
 [![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Installs and configures mcelog for decoding kernel hardware error messages on Linux.
+Installs and configures `mcelog` for decoding kernel hardware error messages on Linux.
+
+> [!IMPORTANT]
+> **Major Version Bump:** This cookbook has been migrated to a Custom Resource-based pattern. Please see the [Migration Guide](migration.md) for details on how to update your wrapper cookbooks.
 
 ## Maintainers
 
@@ -16,75 +19,24 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Platforms
 
-- Debian 9 (10+ does not include mcelog)
-- RHEL based distros 7+
+- Debian / Ubuntu
+- RHEL based distros 7+ (AlmaLinux, Rocky Linux, Oracle Linux)
 
 ### Chef
 
-- Chef 12.15+
+- Chef 15.3+
 
-### Cookbooks
+## Resources
 
-default - installs and configures mcelog
-
-## Attributes
-
-### config options
-
-- `default['mcelog']['cpu']` = nil
-- `default['mcelog']['cpumhz']` = nil
-- `default['mcelog']['filter']` = 'yes'
-- `default['mcelog']['dmi']` = 'no'
-
-### logging options
-
-- `default['mcelog']['syslog']` = 'yes'
-- `default['mcelog']['syslog-error']` = 'yes'
-- `default['mcelog']['logfile']` = '/var/log/mcelog' # this can only be used if syslog is not active
-- `default['mcelog']['filter-memory-errors']` = 'no'
-- `default['mcelog']['raw']` = 'no'
-
-### user/group settings
-
-- `default['mcelog']['run-credentials-user']` = 'root'
-- `default['mcelog']['run-credentials-group']` = 'root'
-- `default['mcelog']['server']['client-user']` = 'root'
-- `default['mcelog']['server']['client-group']` = 'root'
-
-### dimm monitoring settings
-
-- `default['mcelog']['dimm']['dimm-tracking-enabled']` = 'yes'
-- `default['mcelog']['dimm']['dmi-prepopulate']` = 'yes'
-- `default['mcelog']['dimm']['uc-error-threshold']` = '1 / 24h'
-- `default['mcelog']['dimm']['ce-error-threshold']` = '10 / 24h'
-
-### cpu monitoring settings
-
-- `default['mcelog']['socket']['socket-tracking-enabled']` = 'yes'
-- `default['mcelog']['socket']['mem-uc-error-threshold']` = '100 / 24h'
-- `default['mcelog']['socket']['mem-ce-error-trigger']` = 'socket-memory-error-trigger'
-- `default['mcelog']['socket']['mem-ce-error-threshold']` = '100 / 24h'
-- `default['mcelog']['socket']['mem-ce-error-log']` = 'yes'
-
-### cpu cache settings
-
-- `default['mcelog']['cache']['cache-threshold-trigger']` = 'cache-error-trigger'
-- `default['mcelog']['cache']['cache-threshold-log']` = 'yes'
-
-### memory page settings
-
-- `default['mcelog']['page']['memory-ce-threshold']` = '10 / 24h'
-- `default['mcelog']['page']['memory-ce-log']` = 'yes'
-- `default['mcelog']['page']['memory-ce-action']` = 'soft'
-
-### trigger settings
-
-- `default['mcelog']['trigger']['children-max']` = 2
-- `default['mcelog']['trigger']['directory']` = '/etc/mcelog'
+- [mcelog](documentation/mcelog.md)
 
 ## Usage
 
-Apply the default recipe to the node.
+This cookbook provides a single resource `mcelog`. Call it in your wrapper cookbook to install and configure the daemon.
+
+```ruby
+mcelog 'default'
+```
 
 ## Contributors
 
