@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the mcelog cookbook.
 
+## [3.0.0](https://github.com/sous-chefs/mcelog/compare/v2.2.4...v3.0.0) (2026-04-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate mcelog to custom resources ([#46](https://github.com/sous-chefs/mcelog/issues/46))
+
+### Features
+
+* migrate mcelog to custom resources ([#46](https://github.com/sous-chefs/mcelog/issues/46)) ([055f4e7](https://github.com/sous-chefs/mcelog/commit/055f4e77d99e5b95581b7738fbeb51e8182bf878))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#41](https://github.com/sous-chefs/mcelog/issues/41)) ([eccab3f](https://github.com/sous-chefs/mcelog/commit/eccab3fcbd0564ea5df438b276358ed3b758068e))
+
 ## [2.2.4](https://github.com/sous-chefs/mcelog/compare/2.2.3...v2.2.4) (2025-10-15)
 
 
